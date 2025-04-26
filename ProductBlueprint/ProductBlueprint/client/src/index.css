@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* New color palette based on provided image */
+  --cream: 60 10% 86%; /* #e5e3d4 */
+  --mint: 95 30% 62%; /* #9abf80 */
+  --lavender: 243 20% 51%; /* #6a669d */
+  --navy: 219 53% 24%; /* #1c325b */
+  
+  /* Theme colors */
+  --background: var(--cream);
+  --foreground: var(--navy);
+  --muted: 60 15% 92%;
+  --muted-foreground: var(--navy);
+  --popover: var(--cream);
+  --popover-foreground: var(--navy);
+  --card: 0 0% 100%;
+  --card-foreground: var(--navy);
+  --border: 95 10% 82%;
+  --input: 95 10% 82%;
+  --primary: var(--mint);
+  --primary-foreground: var(--navy);
+  --secondary: var(--lavender);
+  --secondary-foreground: 0 0% 100%;
+  --accent: var(--lavender);
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: var(--lavender);
+  --radius: 0.5rem;
+  }
+  .dark {
+  /* Dark mode using the same color palette but with adjustments */
+  --background: var(--navy);
+  --foreground: var(--cream);
+  --muted: 219 30% 18%;
+  --muted-foreground: 60 15% 80%;
+  --popover: var(--navy);
+  --popover-foreground: var(--cream);
+  --card: 219 53% 20%;
+  --card-foreground: var(--cream);
+  --border: 219 40% 30%;
+  --input: 219 40% 30%;
+  --primary: var(--mint);
+  --primary-foreground: var(--navy);
+  --secondary: var(--lavender);
+  --secondary-foreground: var(--cream);
+  --accent: var(--lavender);
+  --accent-foreground: var(--cream);
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: var(--lavender);
+  --radius: 0.5rem;
+  }
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+/* Added custom CSS for gradients and transitions */
+.bg-gradient-primary {
+  @apply bg-gradient-to-r from-[#9abf80] to-[#81a569];
+}
+
+.bg-gradient-secondary {
+  @apply bg-gradient-to-r from-[#6a669d] to-[#55517e];
+}
+
+.bg-gradient-success {
+  @apply bg-gradient-to-r from-[#9abf80] to-[#81a569];
+}
+
+.bg-gradient-warning {
+  @apply bg-gradient-to-r from-[#edc988] to-[#e2b45f];
+}
+
+/* Additional gradients for our color scheme */
+.bg-gradient-cream {
+  @apply bg-gradient-to-r from-[#e5e3d4] to-[#d5d3c4];
+}
+
+.bg-gradient-navy {
+  @apply bg-gradient-to-r from-[#1c325b] to-[#16294b];
+}
+
+.transition-all {
+  transition: all 0.3s ease;
+}
